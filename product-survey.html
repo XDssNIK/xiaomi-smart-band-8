@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос | Xiaomi Smart Band 8</title>
+    <link rel="stylesheet" href="product-style.css">
+</head>
+<body>
+    <a href="product-index.html" class="nav-btn">Назад</a>
+    
+    <div class="survey-card">
+        <div class="survey-header">
+            <div class="logo">XIAOMI</div>
+            <h2>Оцените презентацию</h2>
+            <p class="tagline">Анонимный опрос</p>
+        </div>
+
+        <form class="survey-form">
+            <div class="question">
+                <label>1. Общая оценка</label>
+                <div class="rating">
+                    <input type="radio" name="rate" id="r1"><label for="r1">1</label>
+                    <input type="radio" name="rate" id="r2"><label for="r2">2</label>
+                    <input type="radio" name="rate" id="r3"><label for="r3">3</label>
+                    <input type="radio" name="rate" id="r4"><label for="r4">4</label>
+                    <input type="radio" name="rate" id="r5"><label for="r5">5</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>2. Что понравилось?</label>
+                <div class="checkboxes">
+                    <label><input type="checkbox"> Дизайн</label>
+                    <label><input type="checkbox"> Функции</label>
+                    <label><input type="checkbox"> Цена</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>3. Ваши предложения</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+
+        <div class="survey-footer">
+            <p>Спасибо за отзыв!</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.survey-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо!');
+            setTimeout(() => {
+                window.location.href = 'product-index.html';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
